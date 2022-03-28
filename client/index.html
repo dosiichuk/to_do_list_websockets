@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <header id="container-title">
+          <h1>To Do List with socket.io</h1>
+        </header>
+        <hr>
+      
+        <nav id="container-filter" class="containers">
+          <input id="act" type="checkbox" checked>
+          <label for="act">
+            Active
+            <div class="counter">
+            </div>
+          </label>
+          <input id="done" type="checkbox">
+          <label for="done">
+            Done
+            <div class="counter">
+            </div>
+          </label>
+          <input id="delete" type="checkbox">
+          <label for="delete">
+            Deleted
+            <div class="counter">
+            </div>
+          </label>
+        </nav>
+        <hr>
+        <main>
+            <h3 style="margin-top: 1rem">Your name is: <span id="user">undefined</span></h3>
+            <form id="loginForm" class="containers">
+              
+              <input id="loginInput" type="text" name="input-item" placeholder="Write your nickname...">
+              <button>Login</button>
+            </form>
+          </main>
+      
+        <main>
+          <form id="inputForm" class="containers">
+            <input id="taskInput" type="text" name="input-item" placeholder="Add a todo..." autocomplete='off'>
+            <button>Add</button>
+          </form>
+          <div id="list" class="containers">
+          </div>
+        </main>
+      
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuidv4.min.js" integrity="sha512-BCMqEPl2dokU3T/EFba7jrfL4FxgY6ryUh4rRC9feZw4yWUslZ3Uf/lPZ5/5UlEjn4prlQTRfIPYQkDrLCZJXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src='app.js'></script>
+</body>
+</html>
